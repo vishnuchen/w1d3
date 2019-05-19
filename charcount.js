@@ -7,12 +7,12 @@ function countLetters (string){
    //console.log( letters);
    for (let i = 0; i < letters.length; i++) {
        //if ('key' in myObj)
-       if (letters[i] !== ' '){
+
          if (letters[i] in stringChars){
-           stringChars[letters[i]] += 1;
+           stringChars[letters[i]].push(i);
          }else{
-           stringChars[letters[i]] = 1;
-         }
+           stringChars[letters[i]] = [i];
+
        }
 
    }
